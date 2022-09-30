@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'avanzo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'avanzo_db',
         'USER': 'avanzo_user',
         'PASSWORD': 'password',
