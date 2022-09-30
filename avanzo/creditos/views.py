@@ -32,7 +32,7 @@ def solicitud_view(request):
         # es aprobada o no para darle respuesta al usuario
         ser = SolicitudCreditoSerializer(data=request.data) 
         if ser.is_valid():
-            time.sleep(30)
+            time.sleep(180)
             ser.save()
             return Response(ser.data, status=status.HTTP_201_CREATED)
 
