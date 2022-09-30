@@ -3,7 +3,7 @@ from .cliente_logic import get_cliente
 from .analista_logic import get_analista
 
 def get_solicitudes():
-    return SolicitudCredito.objects.all().first()
+    return SolicitudCredito.objects.all()
 
 def get_solicitud(solicitud_pk):
     return SolicitudCredito.objects.get(pk=solicitud_pk)
