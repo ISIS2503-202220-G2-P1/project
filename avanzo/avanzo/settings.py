@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'avanzo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BD_MANEJADOR',
-        'USER': 'postgres',
-        'PASSWORD': 'postgrespw',
-        'HOST': '127.0.0.1',
-        'PORT': '5500'
+        'NAME': 'avanzo_db',
+        'USER': 'avanzo_user',
+        'PASSWORD': 'password',
+        'HOST': '10.128.0.2',
+        'PORT': '5432'
     }
 }
 
