@@ -33,7 +33,7 @@ def solicitud_view(request):
         ser = SolicitudCreditoSerializer(data=request.data) 
         if ser.is_valid():
             time.sleep(30)
-            solicitud_dto = sl.create_solicitud(json.loads(request.body))
+            ser.save()
             return Response(ser.data, status=status.HTTP_201_CREATED)
 
         return Response(ser.errors, status = status.HTTP_400_BAD_REQUEST)
