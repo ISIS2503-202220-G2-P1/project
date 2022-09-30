@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "e5b02af8-5b45-44f1-bd2d-a57795897a73",
+		"name": "PruebasBackSprint2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19569799"
+	},
+	"item": [
+		{
+			"name": "RequestConsultarEstado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/creditos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"creditos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RequestCrearSolicitudCredito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"estado\": \"EN PROCESO\",\n            \"cliente\": 2,\n            \"analista\": 2,\n            \"cantidad\": 50000,\n            \"plazo_en_meses\": 2\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/creditos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"creditos",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
