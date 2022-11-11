@@ -1,0 +1,154 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Avanzo</title>
+
+  <link rel="stylesheet" href="{% static '/css/component.css' %}">
+  <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+	<!-- Google web font  -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+<!-- Navigation section  -->
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <a href="#top" class="navbar-brand smoothScroll">Avanzo</a>
+      </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#top" class="smoothScroll"><span>Home</span></a></li>
+            <li><a href="#gallery" class="smoothScroll"><span>Creditos</span></a></li>
+          </ul>
+       </div>
+    </div>
+  </div>
+
+<!-- Gallery section -->
+
+<section id="gallery" style="margin-top: 5%;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-offset-2 col-md-8 col-sm-12">
+        <div class="section-title">
+          <h1>Avanzo</h1>
+          <h4>
+            ¡Tu Cupo De Crédito Digital! Construimos una metodología de pagos a corto plazo que permiten aprender a tener mayor control del dinero, cuentas con un cupo max. INMEDIATO hasta de $500.000
+          </h4>
+        </div>
+      </div>
+
+      <ul class="grid cs-style-4">
+        <li class="col-md-6 col-sm-6">
+          <figure>
+            <div><img src="https://www.womenintech.co.uk/wp-content/uploads/2021/02/wallet-3950973_1920.jpg" alt="image 1"></div>
+            <figcaption>
+              <h1>Sapien arcu</h1>
+              <small>Cum sociis natoque penatibus et magnis dis parturient montes.</small>
+              <a href="#">Read More</a>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="col-md-6 col-sm-6">
+          <figure>
+            <div><img src="https://www.incharge.org/wp-content/uploads/2020/07/Financial-Literacy-Online.jpg" alt="image 2"></div>
+            <figcaption>
+              <h1>Aliquam erat</h1>
+              <small>Suspendisse venenatis quam sed libero euismod feugiat.</small>
+              <a href="#">Details</a>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="col-md-6 col-sm-6">
+          <figure>
+            <div><img src="https://sumus.com.co/wp-content/uploads/2021/07/fp-fintech1_120521w.jpg_759710130.jpg" alt="image 3"></div>
+            <figcaption>
+              <h1>Cras ante sem</h1>
+              <small>Aenean urna massa, convallis vehicula velit et, dictum pellentesque nisi.</small>
+              <a href="#">Learn More</a>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="col-md-6 col-sm-6">
+          <figure>
+            <div><img src="https://www.nubedigital.mx/flexo/assets//imagenesblog/ogimage/blog-lgc-nube-digital-10-f.jpg" alt="image 4"></div>
+            <figcaption>
+              <h1>Sed ornare</h1>
+              <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+              <a href="#">Full Post</a>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact section -->
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+
+       <div class="col-md-offset-1 col-md-10 col-sm-12">
+
+        <div class="col-lg-offset-1 col-lg-10 section-title">
+          <h1>Solicita tu crédito ya!</h1>
+          <p>Solicita tu crédito a las mejores tasas del mercado con Avanzo!</p>
+        </div>
+
+        <form action="#" method="post">
+          <div class="col-md-4 col-sm-6">
+            <input name="nombre" type="text" class="form-control" id="name" placeholder="Nombre">
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <input name="empresa" type="text" class="form-control" id="email" placeholder="Empresa">
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Monto"></textarea>
+          </div>
+          <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+            <input type="submit" class="form-control" value="SOLICITAR">
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Back top -->
+<a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- Javascript  -->
+<script src="{% static '/js/jquery.js' %}"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
