@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!tu@ogz#io0k4x2&5bq&+vbad=6+l7!$txl=nckjj4jn8ko3$p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'avanzo'
+    'avanzo',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,24 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = "/login/auth0"
+LOGIN_REDIRECT_URL = "/"
+# TODO
+LOGOUT_REDIRECT_URL = "https://isis2503-zejiran.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F35.238.91.127:8080"
+
+SOCIAL_AUTH_TRAILING_SLASH = False  # Remove end slash from routes
+SOCIAL_AUTH_AUTH0_DOMAIN = 'isis2503-zejiran.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = 'jP7vh2zDplU1PivyzxWRoQ9b57EAtndD'
+SOCIAL_AUTH_AUTH0_SECRET = 'zvoBo-PUMI3qpTLsxNt3rCD4NKXuuVuX1WlRKdUgCE_IrdVEHdXQ4vm5o4yup5OW'
+SOCIAL_AUTH_AUTH0_SCOPE = [
+    'openid',
+    'profile',
+    'email',
+    'role',
+]
+
+AUTHENTICATION_BACKENDS = {
+    'monitoring.auth0backend.Auth0',
+    'django.contrib.auth.backends.ModelBackend',
+}
