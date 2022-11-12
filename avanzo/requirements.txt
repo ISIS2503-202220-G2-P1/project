@@ -1,7 +1,7 @@
 django-filter==21.1
 djangorestframework==3.14.0
 cryptography==2.8
-Django==3.0.4
+Django==2.2
 psycopg2==2.8.4
 psycopg2-binary==2.8.4
 PyJWT==1.7.1
