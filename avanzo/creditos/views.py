@@ -2,7 +2,10 @@ from django.http import HttpResponse
 from .logic import solicitud_logic as sl
 from django.core import serializers
 import json
+import checksum
+import uuid
 from django.views.decorators.csrf import csrf_exempt
+import pickle
 
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -41,6 +44,13 @@ def solicitud_view(request):
         # es aprobada o no para darle respuesta al usuario
         ser = SolicitudCreditoSerializer(data=request.data)
         if ser.is_valid():
+            file_name =  str(uuid.uuid4())
+            checksum_calculated = ''
+            with open(file_name + '.pkl' ,'w') as f:
+                pickle.dump(ser.data,f) 
+                checksum_calculated = checksum.get_for_file(file_name + '.pkl')
+                f.write(checksum_calculated)
+
             time.sleep(180)
             ser.save()
             return Response(ser.data, status=status.HTTP_201_CREATED)
